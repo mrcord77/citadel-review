@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "Citadel: Hybrid Post-Quantum Key Management Architecture Combining X25519 and ML-KEM-768 in Rust"
+
+message: "If you use or cite this work, please cite the Zenodo DOI."
+
+authors:
+  - family-names: Cordero
+    given-names: Andre
+
+doi: 10.5281/zenodo.20293651
+
+repository-code: https://github.com/mrcord77/rust_citadel
+
+url: https://zenodo.org/records/20293651
+
+keywords:
+  - post-quantum cryptography
+  - ML-KEM
+  - X25519
+  - Rust
+  - hybrid cryptography
+  - key management
