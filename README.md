@@ -7,6 +7,13 @@ Licensing:
   Public core (citadel-envelope): AGPL-3.0-or-later
   Operational layer (6 crates):    Proprietary, not included in this package
 
+Public technical review artifacts for Citadel.
+
+Public code:
+https://github.com/mrcord77/rust_citadel
+
+This repository contains review evidence only and excludes the proprietary operational layer.
+
 ## What is Citadel
 
 A self-hosted hybrid post-quantum key management system in Rust combining
