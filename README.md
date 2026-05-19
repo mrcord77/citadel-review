@@ -14,6 +14,16 @@ https://github.com/mrcord77/rust_citadel
 
 This repository contains review evidence only and excludes the proprietary operational layer.
 
+## Citation
+
+Paper DOI: https://doi.org/10.5281/zenodo.20293651
+
+Zenodo archive:
+https://zenodo.org/records/20293651
+
+Public implementation:
+https://github.com/mrcord77/rust_citadel
+
 ## What is Citadel
 
 A self-hosted hybrid post-quantum key management system in Rust combining
