@@ -1,0 +1,34 @@
+N=100000, warmup=10000
+
+Operation                             Mean(µs)   Std(µs)   p50(µs)   p95(µs)   p99(µs)        N
+------------------------------------------------------------------------------------------------
+x25519_keygen                             9.38      4.06      9.20      9.30     12.80   100000
+x25519_dh                                28.33      2.04     28.20     28.40     30.60   100000
+mlkem768_keygen                          27.08      0.67     27.00     27.80     29.40   100000
+mlkem768_encaps                          24.93      1.12     24.70     26.10     29.90   100000
+hkdf_sha256_derive                        0.27      0.06      0.30      0.30      0.30   100000
+aes256gcm_encrypt_1kb                     0.65      0.29      0.60      0.70      0.70   100000
+
+------------------------------------------------------------------------------------------------
+  FULL HYBRID PIPELINE (citadel-envelope)
+------------------------------------------------------------------------------------------------
+hybrid_keygen                            36.50      1.40     36.20     38.60     42.10   100000
+hybrid_encrypt_64b                       64.54      2.02     64.10     66.80     72.40   100000
+hybrid_encrypt_256b                      64.43      1.50     64.30     64.60     67.60   100000
+hybrid_encrypt_1024b                     65.33      7.71     64.70     67.80     76.20   100000
+hybrid_encrypt_4096b                     67.08      7.37     66.40     69.50     76.00   100000
+hybrid_encrypt_65536b                   102.18      6.36    101.50    104.30    112.10   100000
+hybrid_decrypt_64b                       62.37      4.62     62.00     64.40     68.60   100000
+hybrid_decrypt_1024b                     62.98      2.12     62.50     65.40     72.30   100000
+hybrid_decrypt_65536b                    99.21      4.83     98.80    101.20    105.20   100000
+
+=== Ciphertext Sizes ===
+  plaintext      0 bytes -> ciphertext   1154 bytes  (overhead: 1154 bytes)
+  plaintext      1 bytes -> ciphertext   1155 bytes  (overhead: 1154 bytes)
+  plaintext     32 bytes -> ciphertext   1186 bytes  (overhead: 1154 bytes)
+  plaintext     64 bytes -> ciphertext   1218 bytes  (overhead: 1154 bytes)
+  plaintext    256 bytes -> ciphertext   1410 bytes  (overhead: 1154 bytes)
+  plaintext   1024 bytes -> ciphertext   2178 bytes  (overhead: 1154 bytes)
+  plaintext  65536 bytes -> ciphertext  66690 bytes  (overhead: 1154 bytes)
+
+Save this output with your system info (CPU, RAM, OS, rustc version, power plan).

@@ -1,0 +1,10 @@
+cargo-deny v0.19.6
+Date: May 19, 2026
+
+Result: licenses ok
+
+All 278 workspace dependencies use licenses from the approved list:
+  MIT, Apache-2.0, ISC, Unicode-3.0, Unicode-DFS-2016, OpenSSL
+
+Citadel workspace license: AGPL-3.0-or-later
+All dependency licenses are permissive and compatible with AGPL distribution.

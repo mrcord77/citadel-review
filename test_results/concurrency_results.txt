@@ -1,0 +1,10 @@
+running 4 tests
+churn: 10000 claim+release cycles, reclaim verified
+test claim_release_churn ... ok
+mixed traffic: 50 fresh accepted, 50 replays rejected
+contention: 1 accepted, 99 rejected, 0 errors
+test mixed_claim_and_replay_traffic ... ok
+test exactly_one_wins_under_contention ... ok
+distinct claims: 0 false rejections out of 200
+test distinct_claims_never_collide ... ok
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s

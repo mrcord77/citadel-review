@@ -1,0 +1,25 @@
+=== Comparative: X25519 vs ML-KEM-768 vs Citadel Hybrid ===
+Payload: 1 KB | N=50000 | warmup=5000
+
+  Operation                                  Mean(µs)  Std(µs)  p95(µs)      N
+  ----------------------------------------------------------------------------
+
+  CONFIG A: X25519 + AES-256-GCM (classical only)
+  A: full encrypt 1KB                           38.60     6.43    39.80  50000
+
+  CONFIG B: ML-KEM-768 + AES-256-GCM (PQ only)
+  B: full encrypt 1KB                           25.58     7.67    26.60  50000
+
+  CONFIG C: Citadel hybrid (X25519 + ML-KEM-768)
+  C: full encrypt 1KB                           65.25     2.57    67.30  50000
+
+  === SUMMARY (1 KB plaintext) ===
+
+  Configuration           Encrypt(µs)    Overhead(B)               Security
+  --------------------------------------------------------------------------
+  A: X25519-only                 38.6             60    Classical (128-bit)
+  B: ML-KEM-768-only             25.6           1116          PQ (~192-bit)
+  C: Citadel hybrid              65.2           1154     Hybrid (either-or)
+
+  Hybrid vs X25519:    +26.6 µs,  +1094 bytes overhead
+  Hybrid vs ML-KEM:    +39.7 µs,  +38 bytes overhead

@@ -1,0 +1,20 @@
+NIST ACVP ML-KEM-768 Vector Execution
+Date: May 19, 2026
+Toolchain: rustc 1.95.0 MSVC
+Crate: citadel-envelope with ml-kem 0.2.2
+
+Vector source:
+  https://github.com/usnistgov/ACVP-Server/tree/master/gen-val/json-files
+  ML-KEM-keyGen-FIPS203/internalProjection.json (558,841 bytes)
+  ML-KEM-encapDecap-FIPS203/internalProjection.json (1,478,114 bytes)
+
+Results:
+  ML-KEM-768 KeyGen:        25/25 passed (byte-identical to NIST reference)
+  ML-KEM-768 Encapsulation: 25/25 passed (byte-identical to NIST reference)
+  Total:                    50/50 passed
+
+Method: deterministic RNG injection matching NIST-provided seeds (d, z for
+keygen; m for encapsulation). Output compared byte-for-byte against NIST
+expected results from internalProjection.json.
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out

@@ -1,0 +1,14 @@
+cargo-audit v0.22.1
+Date: May 19, 2026
+Advisory database: RustSec (1093 advisories loaded)
+Dependencies scanned: 278 crate dependencies
+
+Production dependency advisories: 0
+
+Dev-dependency advisories: 1
+  Crate:     rsa v0.9.10
+  Advisory:  RUSTSEC-2023-0071 (Marvin Attack: timing side channels)
+  Severity:  5.9 (medium)
+  Impact:    None — rsa is a dev-dependency used in test harness only.
+             Citadel does not use RSA in any production code path.
+  Fix:       No upstream fix available.
